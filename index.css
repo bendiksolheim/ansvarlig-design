@@ -1,0 +1,218 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Raleway Medium'), local('Raleway-Medium'),
+    url(/Raleway/Raleway-Medium.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Raleway Medium'), local('Raleway-Medium'),
+    url('/Raleway/Raleway-Medium.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes scaleIn {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes scaleOut {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+:root {
+    --background: #fafafa;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+.remark-container {
+    background-color: var(--background);
+}
+.remark-slide-content h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    margin: 0;
+}
+.remark-slide-number {
+    display: none;
+}
+.remark-slide-scaler {
+    box-shadow: none;
+}
+.remark-slide-content {
+    background-color: var(--background);
+}
+.remark-visible {
+    animation: fadeIn .4s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+}
+.remark-fading {
+    animation: fadeOut .4s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.one-third {
+    padding-top: 15%;
+}
+
+#design {
+    margin-left: -6px;
+}
+
+.name::before {
+    background: black;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 37px;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.name p {
+    margin: 20px 0 0 0;
+}
+
+.graph {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.graph__bar {
+    align-items: center;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    background: black;
+    color: var(--background);
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    width: 80px;
+}
+
+.graph__bar::after {
+    bottom: -45px;
+    color: black;
+    content: attr(data-label);
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    right: 30px;
+    transform: rotate(-40deg);
+    transform-origin: right;
+}
+
+.remark-visible .graph__bar {
+    animation-name: scaleIn;
+    animation-delay: .4s;
+}
+
+.remark-fading .graph__bar {
+    animation-name: scaleOut;
+}
+
+.graph__bar--2011 {
+    height: 70px;
+}
+
+.graph__bar--2012 {
+    height: 95px;
+}
+
+.graph__bar--2013 {
+    height: 128px;
+}
+
+.graph__bar--2014 {
+    height: 168px;
+}
+
+.graph__bar--2015 {
+    height: 194px;
+}
+
+.graph__bar--2016 {
+    height: 220px;
+}
+
+.graph__bar--2017 {
+    height: 230px;
+}
+
+.graph__bar--2018 {
+    height: 350px;
+}
+
+.source {
+    font-size: 1rem;
+    position: relative;
+    top: 100px;
+}
+
+.graph--web {
+    width: 500px;
+}
+
+.graph__bar--adressa {
+    height: 80px;
+}
+
+.graph__bar--nrk {
+    height: 89px;
+}
+
+.graph__bar--vg {
+    height: 120px;
+}
+
+.graph__bar--db {
+    height: 117px;
+}
